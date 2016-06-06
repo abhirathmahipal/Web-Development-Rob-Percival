@@ -27,14 +27,23 @@
             color:green;
         }
         
+        .yellowbox {
+            background-color:yellow;
+            position: relative;
+            left:100px;
+            top:200px;
+        }
+        
         .underline{
             text-decoration: underline;
         }
         
         div {
             background-color:azure;
-            width:100%;
-            height:300px;
+            width:50%;
+            height:auto;
+            float:left;
+            
             
         }
         
@@ -42,17 +51,30 @@
             background-color: green;
             height: auto;
         }
-    
-    
-    
-    
+
+        .clear{
+            clear:both;
+            height:100px;
+            width: 100%;
+            background-color: crimson;
+        }
+        .blackbox{
+            background-color: black;
+            height: 100px;
+            width:50%;
+            position:fixed;
+            top:10px;
+            left:20px;           
+            margin:-10px;
+            padding:40px;
+        }
+        
     
     </style>
     
 </head>
 
 <body>
-<div>
     <h1>Example Domain</h1>
     <!-- Inline CSS -->
     
@@ -60,14 +82,22 @@
     <p style="color:green;font-size:300%;">Green text overrides the red text  that comes from the internal css</p>
     <p><a class="large green" href="">Green text form the internal CSS.</a>Red Text from syle tag css</p>
     </div>
+    <div class="clear"></div>
+    <div class="yellowbox">
+    <p> Some text to bloat this div</p>
+    </div>
     
-    
-    <div class = mydiv>
+    <div class ="mydiv">
     <p class="large">Some more text. It inherits red from the internal CSS.</p>
     
     <p>The third <span class = "underline green">word</span> in this paragraph in underlines</p>
     </div>
     
-</div>
+    <div class="blackbox">
+    </div>
+    
+    <div class="blackbox" style="position:absolute; top:200px;left:40px;">
+    </div>
+    
 </body>
 </html>
