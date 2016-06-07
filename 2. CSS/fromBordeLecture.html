@@ -31,10 +31,48 @@
             border-width: 20px;
         }
         
+        p {
+            font-size:300%; /* 300% of what it would have been */
+            clear:both;
+            font-family:Arial, Helvetica, sans-serif;
+            color:#b2cc21;            
+        }
+        
+        .bold {
+            font-weight: bold;
+            
+        }
+        
+        .italic {
+            font-style: italic;
+            font-size: 2em; /* 1em = 16px, default size given by browsers */
+        }
+        
+        .oblique {
+            font-style:oblique;
+        }
+        
+        .textdiv {
+            height:400px;
+            width:500px;
+            text-align:justify;       
+            clear:both;
+        }
+        
+        a {
+            
+        }
+        
+        a:hover {
+            font-size:200%;
+            color:blueviolet;
+        }
+        
     </style>
 </head>
     
 <body>
+
     <div class="red">
     
     </div>
@@ -45,8 +83,14 @@
 
     <div class="green">
 
-    </div>        
+    </div>
+    <a href="http://www.google.com" target=_blank>Google</a>
     
+    <div class="textdiv">
+    <p class="bold">This is some text</p>
+    <p class="italic">This is some italic text sdfjlkajfklajdsklfjadkfjakljfkdkafjdfaf;</p>
+    <p class="oblique">This is some oblique text. dajl fkjlkdaf jlkkllkalkfkljl d</p>
+    </div>
 </body>
     
 </html>
