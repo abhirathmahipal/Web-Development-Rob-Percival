@@ -17,14 +17,21 @@
     <div id="secondDiv">Some Text</div>
     <button id="textCreator">Create Some Text</button>
     <div id="emptyDiv"></div>
+    
+    <input id="myInput" type="text" placeholder="Enter Something" />
     <script type="text/javascript">
+        
         
     // This is a commnet
     /*
         This is a multi-line comment
     */
+    var myArray = ["rain", "sunshine"];  
+    var divId="firstDiv";
     document.getElementById("textChanger").onclick = function() {
-        document.getElementById("firstDiv").innerHTML = "Text Changed"
+        var newText = document.getElementById("myInput").value;
+
+        document.getElementById(divId).innerHTML = newText;
     }
     
     document.getElementById("textAppend").onclick = function()
@@ -35,7 +42,12 @@
     {
         document.getElementById("emptyDiv").innerHTML = "<ul><li>Cat</li><li>Dog</li></ul>"
     }
-
+    
+    console.log(myArray);
+    myArray.push("Snow");
+    myArray.splice(1,1);
+    // Slicing and splicing are different.
+    console.log(myArray.length);
     </script>
 </body>
 </html>
