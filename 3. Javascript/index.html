@@ -11,17 +11,31 @@
 
 <body>
     
-    <button onclick="alert('Hi Abhirath')">Click Me</button>
-    
-    <p id="text">Some Text</p>
+    <button id="textChanger">Change First Div Text</button>
+    <div id="firstDiv">This is some text that we're about to change.</div>
+    <button id="textAppend">Text Appending</button>
+    <div id="secondDiv">Some Text</div>
+    <button id="textCreator">Create Some Text</button>
+    <div id="emptyDiv"></div>
     <script type="text/javascript">
         
     // This is a commnet
     /*
         This is a multi-line comment
     */
-    document.getElementById("text").innerHTML = "New Text";
+    document.getElementById("textChanger").onclick = function() {
+        document.getElementById("firstDiv").innerHTML = "Text Changed"
+    }
     
+    document.getElementById("textAppend").onclick = function()
+    {
+        document.getElementById("secondDiv").innerHTML += " Hey. I've just appended this using Javascript";
+    }
+    document.getElementById("textCreator").onclick = function()
+    {
+        document.getElementById("emptyDiv").innerHTML = "<ul><li>Cat</li><li>Dog</li></ul>"
+    }
+
     </script>
 </body>
 </html>

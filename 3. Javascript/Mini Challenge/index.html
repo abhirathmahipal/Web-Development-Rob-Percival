@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <style>
+    
+    #circle {
+        height:300px;
+        width: 300px;
+        border-radius: 50%;
+        background-color: red;
+        }
+    
+    
+    </style>
+    
+</head>
+
+<body>
+    <div id="circle"></div>
+    <p>some text to see the change in layout.</p>
+    <button id="circleManipulate">Click Me</button>
+    <script type="text/javascript">
+        
+    // This is a commnet
+    /*
+        This is a multi-line comment
+    */
+    document.getElementById("circleManipulate").onclick = function() {
+        var circleDisplay = document.getElementById("circle").style.display;
+        if(circleDisplay == "none")
+            document.getElementById("circle").style.display = "block";
+        else
+            document.getElementById("circle").style.display = "none";        
+    }
+    
+    </script>
+</body>
+</html>
