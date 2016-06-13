@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Javascript</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    
+    <style>
+        #box {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            display: none;
+        }
+    
+    
+    </style>
+</head>
+<body>
+    
+    <p>Time Taken to Click the Shape: <span id = "time"></span></p>
+    <div id = "box">
+    
+    
+    </div>
+    
+    
+</body>
+    
+<script type="text/javascript">
+    
+    var clickedTime, createdTime, reactionTime;
+    
+    document.getElementById("box").onclick = function() {
+        clickedTime = Date.now();
+        reactionTime = (clickedTime - createdTime)/1000;
+        
+        document.getElementById("time").innerHTML = reactionTime;
+        this.style.display = "none";
+        makeBox();
+    }
+    function makeBox() {
+    var time = Math.random();
+    
+    time *= 5000;
+      
+    setTimeout(function() {
+        document.getElementById("box").style.display = "block"; createdTime = Date.now();
+    }, time);
+        
+     
+    }
+    
+    makeBox();
+    
+</script>
+
+
+</html>
