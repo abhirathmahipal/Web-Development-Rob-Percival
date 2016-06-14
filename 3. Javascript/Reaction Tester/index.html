@@ -8,19 +8,28 @@
     
     
     <style>
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+        }
         #box {
             width: 150px;
             height: 150px;
             background-color: red;
             display: none;
+            position: relative;
         }
-    
+        
+        .bold {
+            font-weight: bold;
+        }
     
     </style>
 </head>
 <body>
     
-    <p>Time Taken to Click the Shape: <span id = "time"></span></p>
+    <h1>Test Your Reflexes</h1>
+    <p> Click on the boxes or circles as quickly as you can. They appear at random places and disappear once you click them.</p>
+    <p class = "bold">Time Taken to Click the Shape: <span id = "time">Not Attempted Yet</span></p>
     <div id = "box">
     
     
@@ -32,6 +41,15 @@
 <script type="text/javascript">
     
     var clickedTime, createdTime, reactionTime;
+    function getRandomColor() {
+        var letters = "0123456789ABCDEF".split('');
+        var color = "#"
+        for (var i = 0; i < 6; i++)
+            color += letters[Math.round(Math.random() * 15)]
+            
+        return color;
+    }
+    
     
     document.getElementById("box").onclick = function() {
         clickedTime = Date.now();
@@ -42,12 +60,23 @@
         makeBox();
     }
     function makeBox() {
-    var time = Math.random();
+    var randomInt = Math.random();
     
-    time *= 5000;
-      
+    time = randomInt * 3000;
+    boxSelector = document.getElementById("box");
+        
     setTimeout(function() {
-        document.getElementById("box").style.display = "block"; createdTime = Date.now();
+        if (randomInt < 0.5)
+            boxSelector.style.borderRadius = "100px";
+        else
+            boxSelector.style.borderRadius = "0px";
+        
+        top = randomInt * 300;
+        left = randomInt * 500;
+        
+        boxSelector.style.marginTop = top+"px";
+        boxSelector.style.marginLeft = left+"px";
+        boxSelector.style.display = "block"; boxSelector.style.backgroundColor = getRandomColor();createdTime = Date.now();
     }, time);
         
      
