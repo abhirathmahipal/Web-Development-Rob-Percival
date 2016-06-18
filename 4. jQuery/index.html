@@ -30,6 +30,9 @@
 <body>
     
     <div id = "circle"></div>
+    <p> This is some text</p>
+    <iframe src="http://www.cnn.com"></iframe>
+
     <div class = "square"></div>
     <div class = "square"></div>
 
@@ -42,7 +45,15 @@
 //        }
         
         $("#circle").click(function() {
-            alert("Circle Clicked"); 
+            $("p").html("The text has been changed");
+        });
+        
+        $(".square").hover(function() {
+            $("iframe").attr("src", "http://www.youtube.com");
+        });
+        
+        $("#circle").hover(function() {
+            $("p").html("Hovering Over");
         });
         
         $(".square").click(function() {
