@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="jQuery.js"></script>
+    
+    
+    <style>
+        #circle {
+            width:200px;
+            height: 200px;
+            background-color: green;
+            border-radius: 100px;
+        }
+        
+        .square {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-top:10px;
+        }
+    
+    </style>
+</head>
+
+<body>
+    
+    <div id = "circle"></div>
+    <div class = "square"></div>
+    <div class = "square"></div>
+
+    
+    <script>
+//        if(jQuery) {
+//            alert("jQuery works fine");      
+//        } else {
+//            alert("jQuery isn't working fine");
+//        }
+        
+        $("#circle").click(function() {
+            alert("Circle Clicked"); 
+        });
+        
+        $(".square").click(function() {
+            alert("Square Clicked"); 
+        });
+    
+    </script>
+    
+</body>
+</html>
