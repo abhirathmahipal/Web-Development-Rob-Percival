@@ -31,7 +31,9 @@
     
     <div id = "circle"></div>
     <p> This is some text</p>
-    <iframe src="http://www.cnn.com"></iframe>
+    <button id="fader">Fade Out</button>
+    <button id="fadeIn">Fade In</button>
+<!--    <iframe src="http://www.cnn.com"></iframe>-->
 
     <div class = "square"></div>
     <div class = "square"></div>
@@ -44,9 +46,9 @@
 //            alert("jQuery isn't working fine");
 //        }
         
-        $("#circle").click(function() {
-            $("p").html("The text has been changed");
-        });
+//        $("#circle").click(function() {
+//            $("p").html("The text has been changed");
+//        });
         
         $(".square").hover(function() {
             $("iframe").attr("src", "http://www.youtube.com");
@@ -59,7 +61,21 @@
         $(".square").click(function() {
             alert("Square Clicked"); 
         });
-    
+        
+        $("#fader").click(function() {            
+            $("p").fadeOut(2000, function() {
+                alert("Fadeout Complete");
+            });
+        });
+        
+        $("#fadeIn").click(function() {            
+            $("p").fadeIn(5000);
+        });
+        
+        $("#circle").click(function() {
+            $(this).animate({width:"300px", height:"300px", borderRadius:"150px", marginLeft:"100px", marginTop:"100px"}, 1500); 
+        });
+        
     </script>
     
 </body>
